@@ -14,7 +14,6 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from qssi device
 $(call inherit-product, device/qualcomm/qssi/device.mk)
-
 PRODUCT_DEVICE := qssi
 PRODUCT_NAME := omni_qssi
 PRODUCT_BRAND := qti
