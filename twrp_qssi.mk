@@ -6,23 +6,21 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from qssi device
 $(call inherit-product, device/qualcomm/qssi/device.mk)
+
 PRODUCT_DEVICE := qssi
-PRODUCT_NAME := omni_qssi
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := qssi system image for arm64
-PRODUCT_MANUFACTURER := qualcomm
-
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="qssi-user 11 RKQ1.200710.002 1625821014931 release-keys"
-
-BUILD_FINGERPRINT := qti/qssi/qssi:11/RKQ1.200710.002/1625821014931:user/release-keys
+PRODUCT_NAME := twrp_qssi
+PRODUCT_BRAND := OPPO
+PRODUCT_MODEL := CPH2089
+PRODUCT_MANUFACTURER := OPPO
