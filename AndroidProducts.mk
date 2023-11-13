@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_qssi.mk
+    $(LOCAL_DIR)/twrp_qssi.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_qssi-user \
-    omni_qssi-userdebug \
-    omni_qssi-eng
+    twrp_qssi-user \
+    twrp_qssi-userdebug \
+    twrp_qssi-eng
