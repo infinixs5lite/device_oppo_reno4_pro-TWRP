@@ -14,13 +14,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit some common twrp stuff.
-$(call inherit-product, vendor/pb/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from qssi device
 $(call inherit-product, device/qualcomm/qssi/device.mk)
 
 PRODUCT_DEVICE := qssi
-PRODUCT_NAME := omni_qssi
+PRODUCT_NAME := twrp_qssi
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := CPH2089
 PRODUCT_MANUFACTURER := OPPO
