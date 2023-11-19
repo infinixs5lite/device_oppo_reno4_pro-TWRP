@@ -17,10 +17,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from qssi device
-$(call inherit-product, device/qualcomm/qssi/device.mk)
+$(call inherit-product, device/oppo/lito/device.mk)
 
-PRODUCT_DEVICE := qssi
-PRODUCT_NAME := twrp_qssi
+PRODUCT_DEVICE := lito
+PRODUCT_NAME := twrp_lito
 PRODUCT_BRAND := OPPO
 PRODUCT_MODEL := CPH2089
 PRODUCT_MANUFACTURER := OPPO
